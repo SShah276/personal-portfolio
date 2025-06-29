@@ -12,31 +12,35 @@
 <body>
     <header>
         <div class="contact-links">
-            <a href="#" class="contact-button">Contact Me</a>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
+            <a href="mailto:shreyasshah395@gmail.com" target="_blank" class="contact-button">Contact Me</a>
+            <a href="https://github.com/SShah276" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/shreyas-shah27/" target="_blank">LinkedIn</a>
         </div>
         <div class="intro">
             <div class="profile-picture">
-                <img src="headshot.jpg" alt="Profile Picture">
+                <img src="images/headshot.jpg" alt="Profile Picture">
             </div>
-            <h1>Hello, I'm <span class="name">Shreyas Shah</span></h1>
+           
+            <h1>Hi, I'm <span class="name">Shreyas Shah</span></h1>
             <h2>Computer Engineering Student @ UIUC</h2>
             <p>Passionate about solving complex problems through innovative engineering solutions and data-driven
                 insights. Currently pursuing my degree while building impactful projects.</p>
             <div class="tags">
-                <span>Engineering</span>
+                <span>Computing</span>
                 <span>Data Science</span>
                 <span>Machine Learning</span>
                 <span>Mathematics</span>
             </div>
         </div>
     </header>
+
     <nav>
         <button onclick="showSection('about')">About Me</button>
         <button onclick="showSection('experiences')">Experiences</button>
         <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('ideas')">Ideas</button>
     </nav>    
+
     <section id="about" class="content-section">
         <h3>About Me</h3>
         <p>I'm a dedicated engineering student with a passion for leveraging technology to solve real-world problems</p>
@@ -53,9 +57,20 @@
         <h3>Projects</h3>
         <p>This section will showcase different projects...</p>
         <!-- Add projects content here -->
-        </section>
+    </section>
+
+    <section id="ideas" class="content-section" style="display: none;">
+        <h3>Ideas</h3>
+        <p>This section will showcase different projects...</p>
+        <!-- Add projects content here -->
+    </section>
 
         <script src="scripts.js"></script>
-</body>
 
+    <div class = "contact-icons">
+        <a href="mailto:shreyasshah395@gmail.com" target="_blank"><img src="images/gmail.png" alt="Email"></a>
+        <a href="https://github.com/SShah276" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/shreyas-shah27/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+</body>
 </html>
