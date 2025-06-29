@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="contact-links">
+            <a href="#" class="contact-button">Contact Me</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="intro">
+            <div class="profile-picture">
+                <img src="headshot.jpg" alt="Profile Picture">
+            </div>
+            <h1>Hello, I'm <span class="name">Shreyas Shah</span></h1>
+            <h2>Computer Engineering Student @ UIUC</h2>
+            <p>Passionate about solving complex problems through innovative engineering solutions and data-driven
+                insights. Currently pursuing my degree while building impactful projects.</p>
+            <div class="tags">
+                <span>Engineering</span>
+                <span>Data Science</span>
+                <span>Machine Learning</span>
+                <span>Mathematics</span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('experiences')">Experiences</button>
+        <button onclick="showSection('projects')">Projects</button>
+    </nav>    
+    <section id="about" class="content-section">
+        <h3>About Me</h3>
+        <p>I'm a dedicated engineering student with a passion for leveraging technology to solve real-world problems</p>
+        <!-- Additional content here -->
+    </section>
+    
+    <section id="experiences" class="content-section" style="display: none;">
+        <h3>Experiences</h3>
+        <p>This section will describe different experiences...</p>
+        <!-- Add experiences content here -->
+    </section>
+    
+    <section id="projects" class="content-section" style="display: none;">
+        <h3>Projects</h3>
+        <p>This section will showcase different projects...</p>
+        <!-- Add projects content here -->
+        </section>
+
+        <script src="scripts.js"></script>
+</body>
+
+</html>
