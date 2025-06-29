@@ -10,11 +10,11 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-image: url("images/background.jpg");
-  opacity: 0.09; /* Change this to your desired opacity */
+  opacity: 0.1; /* Change this to your desired opacity */
   z-index: -1;
 }
 
@@ -30,16 +30,17 @@ header {
 }
 
 .content-section {
-    max-height: 500px;
+    max-height: 1500px;
     /* Fixed height */
     overflow-y: auto;
     /* Enable vertical scrolling */
     padding: 20px;
     background-color: #ffffff;
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 1500px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 4px;
 }
 
 .content-section h3 {
@@ -49,9 +50,12 @@ header {
 }
 
 .contact-links {
-    display: flex;
-    justify-content: flex-end;
     padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
 .contact-links a {
@@ -92,7 +96,8 @@ header {
     justify-content: center;
     align-items: center;
     transform: scale(1.2);
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
 
 .profile-picture img {
@@ -103,14 +108,21 @@ header {
     /* Ensures the image covers the whole area */
 }
 
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 h3 {
     font-size: 2.5rem;
     color: #222;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 1.5rem;
     color: #555;
+    margin-bottom: 30px;
 }
 
 h1 .name {
@@ -138,7 +150,7 @@ p {
 }
 
 nav {
-    background-color: #4a91e75c;
+    background-color: none;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -147,17 +159,20 @@ nav {
 }
 
 nav button {
-    background: none;
+    background: rgb(255, 255, 255);
     border: none;
-    font-size: 1.2rem;
+    border-radius: 1px;
+    font-size: 1.5rem;
     padding: 10px 20px;
     cursor: pointer;
     color: #007bfc;
+    font-weight: bold ;
     transition: background-color 0.3s;
 }
 
 nav button:hover {
-    background-color: #e7eff9;
+    background-color: #005bb5;
+    color: #fff;
 }
 
 section.about {
@@ -169,7 +184,7 @@ section.about h3 {
 }
 
 .contact-icons {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -183,6 +198,66 @@ section.about h3 {
 }
 
 .contact-icons img {
-  width: 40px; /* Adjust icon size as needed */
-  height: 40px;
+  width: 35px; /* Adjust icon size as needed */
+  height: 35px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.left-column, .right-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: #000000;
+    object-fit: cover;
+}
+
+.interests ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.interests li {
+    margin-bottom: 10px;
+    font-size: 1.0rem;
+}
+
+.left-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.school-img img {
+    width: 100%;
+    height: 100%;
+    max-width: 250px; /* Adjust width as needed */
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.bio-text {
+    text-align: center;
+    font-size: 1rem;
 }
