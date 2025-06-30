@@ -1,12 +1,12 @@
 :root {
-    --background-color: #e6ebf0;
+    --background-color: #f5f5f5;
     --text-color: #333;
-    --card-background: #fff;
+    --card-background: #f5f5f5;
     --header-color: #222;
     --subheader-color: #555;
     --paragraph-color: #666;
-    --nav-button-bg: #e6ebf0;
-    --tag-background: #d7dfe8;
+    --nav-button-bg: #f5f5f5;
+    --tag-background: #e2e6eb;
     --border-color: #ddd;
     --contact-link-color: #333;
     --contact-link-border: #ccc;
@@ -24,7 +24,7 @@
     --border-color: #555;
     --contact-link-color: #e0e0e0;
     --contact-link-border: #666;
-        }
+}
 
 
 #theme-toggle {
@@ -39,7 +39,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-     margin-left: 10px; /* ADDED: same margin as contact links */
+    margin-left: 10px; /* ADDED: same margin as contact links */
     text-decoration: none; /* ADDED: to match contact links */
     font-size: inherit; 
 }
@@ -202,6 +202,20 @@ p {
     border-radius: 20px;
     color: var(--text-color);
 }
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-width: 5px;
+    font-size: 0.8rem;
+}
+.project-tags span {
+    background-color: var(--tag-background);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: var(--text-color);
+}
 
 nav {
     background-color: none;
@@ -212,8 +226,9 @@ nav {
 
 nav button {
     background: var(--nav-button-bg);
-    border: none;
+    border: 1px solid rgba(145, 145, 145, 0.212);
     border-radius: 1px;
+    border-width: 2px;
     font-size: 1.5rem;
     padding: 10px 20px;
     cursor: pointer;
@@ -265,12 +280,12 @@ section.about h3 {
 .section-title {
   font-size: 1.4rem;
   color: var(--heading-color);
+  margin-top: 0px;
 }
 
 .left-column, .right-column {
     flex: 1;
     margin: 10px;
-    min-width: 300px;
 }
 
 .right-column h3 {
@@ -279,6 +294,7 @@ section.about h3 {
 
 .education {
     border: 1px solid var(--border-color);
+    margin-top: 15px;
     border-radius: 15px;
     padding: 15px;
     padding-top: 50px;
@@ -291,6 +307,24 @@ section.about h3 {
     align-items: center;
     margin-bottom: 20px;
 }
+
+.section-row {
+    display: flex;
+    align-items: flex-start;
+    /* Ensures both start at the same height */
+    gap: 10px;
+    /* Controls spacing between the two boxes */
+    margin-bottom: 10px;
+    /* Reduce space below this section */
+}
+
+.bio-text, .education {
+    flex: 1;
+    /* Optional: ensures they take equal space */
+    margin: 0;
+    /* Remove any bottom margin that pushes them apart */
+}
+
 
 .logo {
     width: 100px;
@@ -326,13 +360,20 @@ section.about h3 {
  .bio-text {
     text-align: center;
     font-size: 1rem;
-    margin-top: 5px; /* ADDED: reduced space between header and bio text */
+    margin-top: 16px; /* ADDED: reduced space between header and bio text */
     /* ADDED: bubble-like border styling */
     border: 1px solid var(--border-color);
     border-radius: 15px;
     padding: 15px;
     background-color: var(--card-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.about-content,
+.section-row,
+.left-column,
+.right-column {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .experience-item {
