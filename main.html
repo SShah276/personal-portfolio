@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <button id="theme-toggle">Toggle Dark Mode</button>
     <header>
         <div class="contact-links">
             <a href="mailto:shreyasshah395@gmail.com" target="_blank" class="contact-button">Contact Me</a>
@@ -23,13 +24,11 @@
            
             <h1>Hi, I'm <span class="name">Shreyas Shah</span></h1>
             <h2>Computer Engineering Student @ UIUC</h2>
-            <p>Passionate about solving complex problems through innovative engineering solutions and data-driven
-                insights. Currently pursuing my degree while building impactful projects and exploring entrepreneurial ideas.</p>
             <div class="tags">
                 <span>Computing</span>
-                <span>Data Science</span>
-                <span>Machine Learning</span>
                 <span>Mathematics</span>
+                <span>Data Science</span>
+                <span>Business</span>
             </div>
         </div>
     </header>
@@ -38,55 +37,150 @@
         <button onclick="showSection('about')">About Me</button>
         <button onclick="showSection('experiences')">Experiences</button>
         <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('ideas')">Ideas</button>
+        <!--<button onclick="showSection('ideas')">Ideas</button>-->
     </nav>    
 
     <section id="about" class="content-section">
-        <h3></h3>
     <div class="about-content">
         <div class="left-column">
+            <h3 class="section-title">Education</h3>
             <div class="education">
-                <h4><b>Education</b></h4>
                 <div class="education-item">
+                    <br>
                     <img src="images/illini.svg" alt="School Logo" class="logo">
                     <div>
-                        <h4>University of Illinois Urbana-Champaign</h4>
-                        <p style="text-align: center;">B.S. in Computer Engineering, <br>  
-                        minor in Technology & Management</p>
-                        <p style="text-align: center;">2023 - 2027</p>
+                        <b>University of Illinois Urbana-Champaign</b>
+                        <p style="text-align: center;"><b>B.S. in Computer Engineering <br>  
+                        Minor in Technology & Management</b></p>
+                        <p style="text-align: center;"> August 2023 - May 2027</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="right-column">
-            <h4><b>Education</b></h4>
-            <div class="school-img">
-                <img src="your-image.jpg" alt="Your Image">
-            </div>
+            <h3 class="section-title">My Interests</h3>
             <div class="bio-text">
-                <p>This section can include a brief personal bio or any content you'd like to add to complement the existing sections.</p>
+                <p style="font-weight: bolder;"> I've always been interested in mathematics, science, and the newest developments in the field of technology.
+                    I look to transform the numerical concepts and scientific relationships that I have learned into real-world solutions. 
+                    <br><br>
+                    I find myself drawn to the newest advancements in machine learning and artifical intelligence, and so I am working
+                    on developing my knowledge in those fields with the hopes to realize its great potential in the future.</p>
+                
             </div>
         </div>
     </div>
     </section>
     
     <section id="experiences" class="content-section" style="display: none;">
-        <h3>Experiences</h3>
-        <p>This section will describe different experiences...</p>
-        <!-- Add experiences content here -->
+        <h3 class="section-title">Off Campus</h3>
+         <div class="experiences-container">
+         <div class="experience-item">
+            <h4>Software Reflash Technician</h4>
+            <div class="company">Ford Motor Company</div>
+            <div class="date">June 2024 - August 2024</div>
+            <div class="description">
+                Developed and optimized data processing algorithms that improved system performance by 25%. 
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h4>Software Engineer</h4>
+            <div class="company">Outlier AI</div>
+            <div class="date">January 2024 - Present</div>
+            <div class="description">
+                Conducting research on optimization algorithms for large-scale data analysis. 
+            </div>
+        </div> 
+        <div class="experience-item">
+            <h4>Lead Mathematics Tutor</h4>
+            <div class="company">Mathnasium Learning Center</div>
+            <div class="date">September 2023 - December 2024</div>
+            <div class="description">
+                Provided one-on-one and group tutoring for calculus, linear algebra, and statistics courses.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h4>Head Soccer Referee</h4>
+            <div class="company">Horizon</div>
+            <div class="date">May 2023 - August 2023</div>
+            <div class="description">
+                Analyzed customer behavior data using statistical methods and visualization tools. 
+            </div>
+        </div>
+        </div>
+        <h3 class="section-title">On Campus</h3>
+        <div class="experience-item">
+            <h4>External Professional Chair</h4>
+            <div class="company">Kappa Theta Tau Professional Engineering Fratnernity</div>
+            <div class="date">June 2024 - August 2024</div>
+            <div class="description">
+                Developed and optimized data processing algorithms that improved system performance by 25%. 
+            </div>
+        </div>
+        <div class="experience-item">
+            <h4>Chapter Relations Chair</h4>
+            <div class="company">Alpha Kappa Psi Professional Business Fraternity</div>
+            <div class="date">June 2024 - August 2024</div>
+            <div class="description">
+                Developed and optimized data processing algorithms that improved system performance by 25%. 
+            </div>
+        </div>
     </section>
     
     <section id="projects" class="content-section" style="display: none;">
-        <h3>Projects</h3>
-        <p>This section will showcase different projects...</p>
-        <!-- Add projects content here -->
+                 <div class="experiences-container">
+         <div class="experience-item">
+            <h4>Chapter Relations Chair</h4>
+            <div class="company">Alpha Kappa Psi Professional Business Fraternity</div>
+            <div class="date">June 2024 - August 2024</div>
+            <div class="description">
+                Developed and optimized data processing algorithms that improved system performance by 25%. 
+                Collaborated with cross-functional teams to implement machine learning models for predictive analytics, 
+                working extensively with Python, SQL, and cloud computing platforms.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h4>Software </h4>
+            <div class="company">UIUC Computer Science Department</div>
+            <div class="date">January 2024 - Present</div>
+            <div class="description">
+                Conducting research on optimization algorithms for large-scale data analysis. 
+                Implemented mathematical models to solve complex computational problems and published findings in undergraduate research symposium. 
+                Focus on numerical methods and statistical computing.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h4>Mathematics Tutor</h4>
+            <div class="company">University Learning Center</div>
+            <div class="date">September 2023 - December 2024</div>
+            <div class="description">
+                Provided one-on-one and group tutoring for calculus, linear algebra, and statistics courses. 
+                Developed innovative teaching methods to help students understand complex mathematical concepts, 
+                improving student performance by an average of 15%.
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h4>Data Analysis Intern</h4>
+            <div class="company">Local Analytics Startup</div>
+            <div class="date">May 2023 - August 2023</div>
+            <div class="description">
+                Analyzed customer behavior data using statistical methods and visualization tools. 
+                Created automated reporting systems that reduced manual work by 40% and provided actionable insights for 
+                business decision-making through data-driven recommendations.
+            </div>
+        </div>
+        </div>
     </section>
 
-    <section id="ideas" class="content-section" style="display: none;">
-        <h3>Ideas</h3>
+    <!--<section id="ideas" class="content-section" style="display: none;">
+        <h2 style="text-align: center;">Ideas</h2>
         <p>This section will showcase different projects...</p>
-        <!-- Add projects content here -->
-    </section>
+        
+    </section>-->
 
         <script src="scripts.js"></script>
 

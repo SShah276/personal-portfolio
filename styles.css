@@ -1,9 +1,60 @@
+:root {
+    --background-color: #e6ebf0;
+    --text-color: #333;
+    --card-background: #fff;
+    --header-color: #222;
+    --subheader-color: #555;
+    --paragraph-color: #666;
+    --nav-button-bg: #e6ebf0;
+    --tag-background: #d7dfe8;
+    --border-color: #ddd;
+    --contact-link-color: #333;
+    --contact-link-border: #ccc;
+}
+
+.dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --card-background: #1e1e1e;
+    --header-color: #e0e0e0;
+    --subheader-color: #c0c0c0;
+    --paragraph-color: #b0b0b0;
+    --nav-button-bg: #292929;
+    --tag-background: #393939;
+    --border-color: #555;
+    --contact-link-color: #e0e0e0;
+    --contact-link-border: #666;
+        }
+
+
+#theme-toggle {
+    position: absolute;
+    padding: 10px;
+    top: 20px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #3f454d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+     margin-left: 10px; /* ADDED: same margin as contact links */
+    text-decoration: none; /* ADDED: to match contact links */
+    font-size: inherit; 
+}
+
+#theme-toggle:hover {
+    background-color: #7f868c;
+    color: #fff;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e6ebf0;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     overflow-x: hidden;
         /* Prevent horizontal scroll */
 }
@@ -14,14 +65,14 @@ body::before {
   height: 100%;
   width: 100%;
   background-image: url("images/background.jpg");
-  opacity: 0.1; /* Change this to your desired opacity */
+  opacity: 0.1; 
   z-index: -1;
 }
 
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f9f8f8fa;
+    background-color: var(--background-color);
 }
 
 .content {
@@ -30,14 +81,14 @@ header {
 }
 
 .content-section {
-    max-height: 1500px;
+    max-height: 1000px;
     /* Fixed height */
     overflow-y: auto;
     /* Enable vertical scrolling */
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--card-background);
     margin: 20px auto;
-    max-width: 1500px;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 4px;
@@ -61,9 +112,9 @@ header {
 .contact-links a {
     margin-left: 10px;
     text-decoration: none;
-    color: #333;
+    color: var(--contact-link-color);
     padding: 10px 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--contact-link-border); 
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -115,13 +166,14 @@ h4 {
 
 h3 {
     font-size: 2.5rem;
-    color: #222;
+    color: var(--header-color); 
     margin-bottom: 20px;
 }
 
 h2 {
+    margin-top: 5px;
     font-size: 1.5rem;
-    color: #555;
+    color: var(--header-color); 
     margin-bottom: 30px;
 }
 
@@ -131,7 +183,7 @@ h1 .name {
 
 p {
     font-size: 1rem;
-    color: #666;
+    color: var(--paragraph-color);
     max-width: 800px;
     margin: 20px auto;
 }
@@ -141,12 +193,14 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    border-width: 10px;
 }
 
 .tags span {
-    background-color: #e7eff9;
+    background-color: var(--tag-background);
     padding: 5px 10px;
     border-radius: 20px;
+    color: var(--text-color);
 }
 
 nav {
@@ -154,12 +208,10 @@ nav {
     display: flex;
     justify-content: center;
     padding: 10px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 nav button {
-    background: rgb(255, 255, 255);
+    background: var(--nav-button-bg);
     border: none;
     border-radius: 1px;
     font-size: 1.5rem;
@@ -180,6 +232,7 @@ section.about {
 }
 
 section.about h3 {
+    margin-top: 20px;
     font-size: 1.5rem;
 }
 
@@ -204,12 +257,33 @@ section.about h3 {
 
 .about-content {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly */
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: var(--heading-color);
 }
 
 .left-column, .right-column {
     flex: 1;
     margin: 10px;
+    min-width: 300px;
+}
+
+.right-column h3 {
+        margin-bottom: 5px;
+    }
+
+.education {
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 15px;
+    padding-top: 50px;
+    background-color: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .education-item {
@@ -219,8 +293,8 @@ section.about h3 {
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-right: 15px;
     border-radius: 50%;
     border: #000000;
@@ -249,15 +323,62 @@ section.about h3 {
     align-items: center;
 }
 
-.school-img img {
-    width: 100%;
-    height: 100%;
-    max-width: 250px; /* Adjust width as needed */
-    border-radius: 50px;
-    margin-bottom: 15px;
-}
-
-.bio-text {
+ .bio-text {
     text-align: center;
     font-size: 1rem;
+    margin-top: 5px; /* ADDED: reduced space between header and bio text */
+    /* ADDED: bubble-like border styling */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 15px; /* REDUCED: from 20px to 15px */
+    background-color: var(--card-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* ADDED: flexbox properties for side-by-side layout */
+    flex: 1;
+    margin-right: 15px;
+    min-width: 300px;
+}
+
+.experience-item:last-child {
+    margin-right: 0;
+}
+
+.experiences-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.experience-item h4 {
+    color: #007bfc;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.experience-item .company {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.experience-item .date {
+    color: var(--subheader-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.experience-item .description {
+    color: var(--paragraph-color);
+    line-height: 1.5;
+    font-size: 0.9rem; /* ADDED: smaller font size */
 }
