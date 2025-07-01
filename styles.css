@@ -423,3 +423,46 @@ section.about h3 {
     line-height: 1.5;
     font-size: 0.9rem; /* ADDED: smaller font size */
 }
+a:link {
+    color: none;
+}
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post h4 {
+    margin: 0 0 10px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #007bfc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #005bb5;
+}
+.quote-box {
+    margin: auto;
+      max-width: 600px;
+      background: none;
+      padding: 2rem;
+      text-align: center;
+    }
