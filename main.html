@@ -31,13 +31,16 @@
                 <span>Business</span>
             </div>
         </div>
+        <br><br>
+        <div class="quote-text" id="quote">Loading...</div>
+        <div class="quote-text" id="author">Loading...</div>
     </header>
 
     <nav>
         <button onclick="showSection('about')">About Me</button>
         <button onclick="showSection('experiences')">Experiences</button>
         <button onclick="showSection('projects')">Projects</button>
-        <!--<button onclick="showSection('ideas')">Ideas</button>-->
+        <button onclick="showSection('blog')">Blog + Ideas</button>
     </nav>    
 
     <section id="about" class="content-section">
@@ -75,6 +78,7 @@
     </section>
     
     <section id="experiences" class="content-section" style="display: none;">
+         <h3>Experiences</h3>
          <div class="experiences-container">
          <div class="experience-item">
             <h4>Software Reflash Technician</h4>
@@ -128,7 +132,8 @@
         </div>
         <h3 class="section-title">Campus Involvement</h3>
         <div class="experience-item">
-            <h4>Kappa Theta Tau Professional Engineering Fratnernity</h4>
+            <a href="https://www.kappathetatau.org/" target="_blank" style="color: rgba(5, 21, 52, 0.343);"> 
+            <h4>Kappa Theta Tau Professional Engineering Fratnernity</h4></a>
             <div class="company">External Professional Chair</div>
             <div class="date">May 2025 - Present</div>
             <div class="description">
@@ -136,7 +141,8 @@
             </div>
         </div>
         <div class="experience-item">
-            <h4>Alpha Kappa Psi Professional Business Fraternity</h4>
+            <a href="https://www.akpsiuiuc.biz/" target="_blank" style="color: rgba(5, 21, 52, 0.343);"> 
+            <h4>Alpha Kappa Psi Professional Business Fraternity</h4></a>
             <div class="company">Chapter Relations Chair</div>
             <div class="date">May 2025 - January 2026</div>
             <div class="description">
@@ -146,14 +152,16 @@
     </section>
     
     <section id="projects" class="content-section" style="display: none;">
+        <h3>Projects</h3>
         <div class="experiences-container">
         <div class="experience-item">
+            <a href="https://github.com/SShah276/patient-data-analysis" target="_blank" style="text-decoration: none;">
             <h4>Patient Data Monitoring </h4>
             <div class="description">
                 <div style="font-weight: bolder;margin-bottom: 0px;">
                 Python Libraries: NumPy, Pandas, MatPlotLib, Scikit-Learn </div>
                 
-                Data analysis project to extract meaningful mathematical concepts from patient signals. 
+                Data analysis project to extract meaningful mathematical concepts from patient signals
               
             </div>
             <br>
@@ -162,15 +170,16 @@
                 <span>PyTorch</span>
                 <span>Jupyter Notebook</span>
             </div>
+            </a>
         </div>
         <div class="experience-item">
+            <a href="https://github.com/SShah276/pdf-analysis" target="_blank" style="text-decoration: none;">
             <h4>PDF Analysis</h4>
             <div class="description">
                 <div style="font-weight: bolder;margin-bottom: 0px;">
                 Python Libraries: PyMuPDF (fitz), Pillow (PIL)</div>
                 
-                Wrote a Python script that can automatically extract construction products from a given PDF using API calls; outputted a single
-                CSV.
+                Wrote a Python script that can automatically extract construction products from a given PDF using API calls; outputting a CSV file
             </div>
             <br>
             <div class="project-tags">
@@ -178,12 +187,14 @@
                 <span>Tesseract OCR</span>
                 <span>OpenAI API</span>
             </div>
+            </a>
         </div>
         <div class="experience-item">
+            <a href="https://github.com/SShah276/flask-blackjack" target="_blank" style="text-decoration: none;">
             <h4>Blackjack Game</h4>
             <div class="description">
                 Web based implementation of the Blackjack card game with original win/loss logic
-                and ability to track user stats through SQL.
+                and ability to track user stats through SQL
             </div>
             <br>
             <div class="project-tags">
@@ -192,11 +203,13 @@
                 <span>MySQL</span>
                 <span>HTML+CSS</span>
             </div>
+            </a>
         </div>
         <div class="experience-item">
+            <a href="https://github.com/SShah276/personal-portfolio" target="_blank" style="text-decoration: none;">
             <h4>Personal Portfolio</h4>
             <div class="description">
-                Personal portfolio website designed from scratch to showcase background, experiences, and projects.
+                Personal portfolio website designed from scratch to showcase background, experiences, and projects
             </div>
             <br>
             <div class="project-tags">
@@ -204,15 +217,71 @@
                 <span>JavaScript</span>
                 <span>Bootstrap</span>
             </div>
+            </a>
+        </div>
+        </div>
+        <h3 class="section-title">In the works...</h3>
+        <div class="experiences-container">
+            <div class="experience-item">
+            <h4>NBA Dataset HOF Prediction</h4>
+            <div class="description">
+                Looking to extract and aggregate data to predict HOF status using 11 features over 5800+ NBA players records
+            </div>
+            <br>
+            <div class="project-tags">
+                <span>Python</span>
+                <span>IPython Notebook</span>
+            </div>
+        </div>
+        <div class="experience-item">
+            <h4>AI Flappy Bird</h4>
+            <div class="description">
+                Working on developing an artificial intelligence that can play Flappy Bird autonomously
+            </div>
+            <br>
+            <div class="project-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>TensorFlow</span>
+            </div>
         </div>
         </div>
     </section>
 
-    <!--<section id="ideas" class="content-section" style="display: none;">
-        <h2 style="text-align: center;">Ideas</h2>
-        <p>This section will showcase different projects...</p>
-        
-    </section>-->
+    <section id="blog" class="content-section" style="display: none;">
+    <h3>Blog</h3>
+    <div class="blog-posts">
+        <article class="post">
+            <h4>Hoeft T&M Seminar - Career Center</h4>
+            <p class="date">Published on: December 2024</p>
+            <p>Attending the Career Center T&M seminar was a transformative experience, particularly due to it being one of the first panels I attended, where I listened to professionals from our campus career center. Their backgrounds in working with students and organizations in professional development were evident, and I appreciated how they brought a wealth of experience to the table. Each of the three panelists explained their commitment to creating a welcoming and dedicated environment for any student who was looking to explore their career path, which made the session both informative and reassuring. It was clear from their approach that the career center team genuinely cared about supporting students on their career journeys. By creating an open and inclusive atmosphere, they encouraged us to ask questions and aid any uncertainties about entering the job market.</p>
+            <p class="full-content" style="display: none;">
+                For example, the panelists answered questions about how companies would respond to students looking for internships at the upcoming Career Fair, providing insight and tips to make a good impression on recruiters. They highlighted the importance of researching companies beforehand, preparing thoughtful questions, and making resumes that effectively communicate personal skills and interests. This isn’t just about impressing recruiters; it’s also about helping students determine if a company’s culture and values align with their own goals. I was very glad to know that these resources were available to me on campus, and I felt more confident and prepared knowing I could rely on the career center for guidance in my job search.
+                <br><br>Reflecting on this experience, I realized that I was only able to benefit from such a valuable experience because I had decided to take BADM261 this semester. This class opened my eyes to what it truly means to develop oneself professionally, and I began to understand that professional growth is not limited to simply earning a degree. Rather, it’s a multi-step journey that involves setting goals, building connections, and remaining dedicated to continuous improvement. BADM261 introduced me to the broad spectrum of professional development, from networking and effective communication to personal branding and career planning. It’s helped me think more critically about how I want to present myself as a professional and the steps I can take to ensure I’m ready for future opportunities.
+                <br><br>Taking this seminar also reshaped my perspective on networking. Initially, I found networking intimidating, especially when it involved speaking to people with significant experience in their fields. However, BADM261 has shown me that networking isn’t about “selling” yourself but about building authentic connections. By listening to others ask thoughtful questions, networking becomes an opportunity to gain insights that go beyond academics. Networking is not just about securing jobs; it’s also a way to learn from others, gain insights into the industry, and become more open-minded.
+                <br><br>The class has also helped me focus on self-assessment and goal-setting, two essential parts of professional development. We did an exercise where we reflected on our strengths, weaknesses, and aspirations. This reflection helped me clarify specific skills I want to build, such as public speaking and project management, and gave me a roadmap for reaching these goals. I actively seek out opportunities to enhance my skills and knowledge, whether it be through formal education, on-the-job learning, or networking with industry professionals. This experience showed me the importance of continually working towards my goals, knowing that every step helps build a strong foundation for my future career.
+                <br><br>As I move forward, I am committed to self-improvement and enjoy the challenge of setting and achieving new goals. The T&M seminar, along with the guidance I’ve received from Mrs. Koon, has determined me to be proactive in my career development. Now, I actively pursue opportunities that challenge and grow my abilities, understanding that professional development is a journey of learning, adapting, and growing. I feel excited to continue navigating this journey with a clearer sense of purpose and direction.
+            </p>
+            <a href="#" class="read-more" onclick="toggleContent(this); return false;">Read More</a>
+        </article>
+        <article class="post">
+            <h4>Hoeft T&M Seminar - Intellectual Property</h4>
+            <p class="date">Published on: November 2024</p>
+            <p>One of the most memorable experiences from the T&M Seminar was the discussion on intellectual property. The guest speakers, highly experienced in law, represented their positions at Singleton Law, AbbVie, and even here at UIUC. Intellectual property was an idea completely new to me, so the discussion quickly became almost overwhelming with law jargon and complex ideas relating to such. However, despite the initial confusion, I found myself interested, eager to understand the web of concepts surrounding copyright, patents, and trademarks.</p>
+            <p class="full-content" style="display: none;">
+                As the discussion progressed, I began to grasp the basics. I learned that copyright protects original works of authorship, such as literature, music, and art. Patents safeguard inventions, giving creators exclusive rights to their innovations for a set time frame. Trademarks identify and distinguish brands, playing a crucial role in consumer recognition. Together, these intellectual property tools contribute significantly to open media by supporting innovation while protecting creators' rights. The guest speakers elaborated on real-world applications, highlighting how intellectual property drives technological advancements and supports industries ranging from pharmaceuticals to software development.
+                <br><br>I now found a deeper interest in intellectual property. It was fascinating to see how law intersects with technology and creativity. As an engineer, I could see how these principles might apply to projects I had worked on inside and outside the classroom. While I hadn’t previously considered intellectual property, the seminar opened my eyes to the importance of guarding innovative ideas.
+                <br><br>After the discussion session, I attended the Networking Lunch with the guest speakers. This part of the seminar stood out to me, particularly because of my conversation with Alan, a representative from Singleton Law Firm. Alan’s kind demeanor made it easy to ask questions beyond the formal seminar setting. When I inquired about his educational background, he revealed that he had studied electrical engineering as an undergraduate before transitioning to a career in law. Hearing this sparked my curiosity about the interdisciplinary paths available to engineers.
+                <br><br>Alan described how his engineering education provided a strong foundation for his work in intellectual property law, and I became a little perplexed. He further explained that the problem-solving mindset developed in engineering was instrumental in understanding complex technical concepts and communicating them effectively. This revelation was eye-opening. As a student who has yet to decide his career path, I was amazed at the breadth of opportunities available to engineers who are adaptable, quick learners, and critical thinkers. Alan’s path demonstrated to me that engineering is not just a degree but a versatile toolkit that can open doors to diverse fields, including law, business, and more.
+                <br><br>Our conversation became increasingly personable as we discussed shared experiences as electrical engineers. I recounted some of my academic challenges and successes, including collaborative projects and the problem-solving skills I developed. Alan’s insights helped me see these experiences in a new light, emphasizing the value of these skills. He encouraged me to explore various career paths, reassuring me that being flexible and open-minded is part of professionalism.  
+                <br><br>This interaction left a lasting impression on me. It highlighted the importance of networking and the value of engaging with professionals who have diverse experiences. The T&M Seminar and Networking Lunch provided a unique opportunity to connect with experts, ask questions, and gain insights into their careers. The experience also reinforced the significance of learning, adaptability, and the willingness to venture into unfamiliar fields.
+                <br><br>Reflecting on this experience, I am grateful for the opportunity to participate in such an eye opening event. It not only expanded my knowledge of intellectual property but also inspired me to think more broadly about my future. The seminar highlighted the intersection of law and engineering, and offered a glimpse into how diverse disciplines can solve complex problems. Above all, it reminded me that career paths don’t have to be linear, and opportunities often arise from unexpected conditions. This realization has motivated me to remain open-minded and proactive in exploring the many possibilities that lie ahead.
+            </p>
+            <a href="#" class="read-more" onclick="toggleContent(this); return false;">Read More</a>
+        </article>
+        <!-- Repeat similar articles -->
+    </div>
+    </section>
 
         <script src="scripts.js"></script>
 
