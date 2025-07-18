@@ -44,5 +44,3 @@ async function getQuote(url) {
     author.innerHTML = `— ${quoteObj.author}`;
 }
 getQuote(api_url);
-
-//change
