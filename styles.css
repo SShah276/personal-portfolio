@@ -19,7 +19,7 @@
     --header-color: #e0e0e0;
     --subheader-color: #c0c0c0;
     --paragraph-color: #b0b0b0;
-    --nav-button-bg: #292929;
+    --nav-button-bg: #1e1e1e;
     --tag-background: #393939;
     --border-color: #555;
     --contact-link-color: #e0e0e0;
@@ -64,15 +64,20 @@ body::before {
   position: fixed;
   height: 100%;
   width: 100%;
+  background-color: #007bfc;
   background-image: url("images/background.jpg");
-  opacity: 0.1; 
+  scale: 160%;
+  opacity: 0.075; 
   z-index: -1;
 }
 
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 0px;
     background-color: var(--background-color);
+    height: 100vh;
+    margin-bottom: 0px;
+    overflow: hidden;
 }
 
 .content {
@@ -132,6 +137,7 @@ header {
 
 .intro {
     margin-top: 30px;
+    /* height: 100vh; */
 }
 
 .profile-picture {
@@ -141,14 +147,14 @@ header {
     overflow: hidden;
     /* Ensure image follows the circular shape */
     margin: 0 auto;
-    border: 2px solid #007bfc;
+    border: 1px solid #007bfc;
     /* Optional border */
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1.2);
-    margin-bottom: 50px;
-    margin-top: 100px;
+    transform: scale(1.6);
+    margin-bottom: 80px;
+    margin-top: 150px;
 }
 
 .profile-picture img {
@@ -175,6 +181,11 @@ h2 {
     font-size: 1.5rem;
     color: var(--header-color); 
     margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.75rem;
+    margin-bottom: 20px;
 }
 
 h1 .name {
@@ -226,12 +237,12 @@ nav {
 }
 
 nav button {
+    border-width: 4px;
     background: var(--nav-button-bg);
-    border: 1px solid rgba(145, 145, 145, 0.212);
-    border-radius: 1px;
-    border-width: 2px;
+    border: var(--contact-link-border);
+    border-radius: 12px;
     font-size: 1.5rem;
-    padding: 10px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     color: #007bfc;
     font-weight: bold ;
@@ -267,8 +278,8 @@ section.about h3 {
 }
 
 .contact-icons img {
-  width: 35px; /* Adjust icon size as needed */
-  height: 35px;
+  width: 50px; /* Adjust icon size as needed */
+  height: 50px;
 }
 
 .about-content {
@@ -386,7 +397,7 @@ section.about h3 {
     margin-bottom: 20px;
     /* ADDED: flexbox properties for side-by-side layout */
     flex: 1;
-    margin-right: 15px;
+    margin-right: 10px;
     min-width: 300px;
 }
 
@@ -471,9 +482,54 @@ a:link {
 #particles-js {
     position: absolute;
     width: 100%;
-    height: 610px;
+    height: 100vh;
     z-index: 0;
     /* Behind everything */
     top: 0;
     left: 0;
 }
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    /*width: 10px;
+    height: 10px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;*/
+    animation: bounceDown 2s infinite;
+    opacity: 0.4;
+    scale: 150%
+
+}
+
+.arrow:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.arrow:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounceDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
