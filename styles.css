@@ -199,6 +199,10 @@ p {
     margin: 20px auto;
 }
 
+li {
+    color: var(--paragraph-color);
+}
+
 .tags {
     display: flex;
     justify-content: center;
@@ -324,10 +328,12 @@ section.about h3 {
     display: flex;
     align-items: flex-start;
     /* Ensures both start at the same height */
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
     /* Controls spacing between the two boxes */
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     /* Reduce space below this section */
+    margin-top: 0px;
 }
 
 .bio-text, .education {
@@ -533,3 +539,26 @@ a:link {
     }
 }
 
+/* Match font with top section */
+.left-column ul,
+.right-column ul {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Style the list bullets nicely */
+.left-column li,
+.right-column li {
+    list-style-type: disc;
+    margin-bottom: 6px;
+}
+
+/* Optional: remove second <ul>'s top margin if you want them tight */
+.list-wrapper+.list-wrapper {
+    margin-top: 10px;
+}
