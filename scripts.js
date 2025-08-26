@@ -38,15 +38,42 @@ function toggleContent(link) {
     }
 }
 
-const quote = document.getElementById("quote") 
-const author = document.getElementById("author");
-const api_url = "https://api.realinspire.live/v1/quotes/random";
-async function getQuote(url) {
-    const response = await fetch(url)
-    var data = await response.json()
-    const quoteObj = data[0];
-    console.log(data);
-    quote.innerHTML = `"${quoteObj.content}"`;
-    author.innerHTML = `— ${quoteObj.author}`;
+const api_url = "https://dummyjson.com/quotes/random";
+
+async function getQuote() {
+  try {
+    const res = await fetch(api_url);
+    const data = await res.json();
+
+    // Fix capitalization
+    const fixedQuote = toSentenceCase(data.quote);
+    const fixedAuthor = toTitleCase(data.author);
+
+    document.getElementById("quote").innerHTML = `"${fixedQuote}"`;
+    document.getElementById("author").innerHTML = `— ${fixedAuthor}`;
+  } catch (err) {
+    console.error("Fetch failed:", err);
+  }
 }
-getQuote(api_url); 
+
+// Convert string to sentence case
+function toSentenceCase(str) {
+  return str
+    .toLowerCase()
+    .replace(/(^\w)|([.!?]\s+\w)/g, c => c.toUpperCase());
+}
+
+// Convert string to title case + remove extra spaces
+function toTitleCase(str) {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ") // remove double spaces
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+getQuote();
+
+
